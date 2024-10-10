@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleadmin.css">
+    <title>Formulário</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 70vh;
+            height: auto;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 2vh;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .form-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .form-header .title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .input-box {
+            width: 48%;
+            margin: 1vh 0;
+        }
+        .input-box.full-width {
+            width: 100%;
+        }
+        .input-box label {
+            font-size: 15px;
+            text-align: left;
+            display: block;
+            margin-bottom: 0.5vh;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 1.5vh;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .continue-button {
+            margin: 3vh 0;
+        }
+        .continue-button button {
+            width: 100%;
+            height: 6vh;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .continue-button button:hover {
+            background-color: #0056b3;
+        }
+        .continue-button button a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 6vh;
+        }
+        .login-link {
+            margin-top: 1vh;
+            font-size: 14px;
+        }
+        .login-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <form action="processa_cadastro.php" method="POST">
+                <div class="form-header">
+                    <img src="img\EspaçoCon__1_-removebg-preview.png" alt="Logo" class="logo">
+                    <div class="title">
+                        <span>Cadastre-se</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="condominio">Condomínio</label>
+                        <input id="condominio" type="text" name="condominio" placeholder="Condomínio" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="sindico">Nome do Síndico</label>
+                        <input id="sindico" type="text" name="sindico" placeholder="Nome do Síndico" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="cnpj">CNPJ</label>
+                        <input id="cnpj" type="text" name="cnpj" placeholder="CNPJ" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="telefone">Telefone</label>
+                        <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+                    <div class="input-box full-width">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" name="senha" placeholder="Senha" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="confirmar-senha">Confirmar Senha</label>
+                        <input id="confirmar-senha" type="password" name="confirmar_senha" placeholder="Confirmar Senha" required>
+                    </div>
+                </div>
+                <div class="continue-button">
+                    <button type="submit">Continuar</button>
+                </div>
+                <div class="login-link">
+                    <span>Já tem login? <a href="login.php">Clique aqui</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
